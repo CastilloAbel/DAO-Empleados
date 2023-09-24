@@ -1,7 +1,5 @@
 import empleados
-import obreros
 import administrativo
-import vendedor
 class Plantel:
     def __init__(self):
         self.empleados = dict()
@@ -18,3 +16,11 @@ class Plantel:
             tipo = e.__class__.__name__
             c[tipo] += 1
         return c
+    
+    def buscar_empleados(self, legajo):
+        return self.empleados[legajo]
+    
+
+    def mostrar_datos(self):
+        for e in self.empleados.values():
+            print(e)

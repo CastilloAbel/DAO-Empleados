@@ -5,3 +5,6 @@ class Obrero(empleados.Empleado):
         self.dias = dias
     def neto(self):
         return self.sueldo / 20 * self.dias
+    
+    def __str__(self) -> str:
+        return super().__str__() + f", Dias: {self.dias}, Sueldo Neto: {self.neto()}"
